@@ -30,10 +30,14 @@ class StoreProductRequest extends FormRequest
             'image_url' => 'required|string|url',
             'is_diskon' => 'required|boolean',
             'harga' => 'required|numeric',
-            'harga_diskon' => 'nullable|required_if:is_diskon,true|lt:harga|numeric',
             'description' => 'nullable|string',
             'category' => 'required|string',
         ];
+
+        if ($this->get('is_diskon') == true) {
+            $validate['harga_diskon'] = 'nullable|required_if:is_diskon,true|lt:harga|numeric';
+        }
+
 
         return $validate;
     }

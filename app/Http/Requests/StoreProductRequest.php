@@ -31,10 +31,14 @@ class StoreProductRequest extends FormRequest
             'is_diskon' => 'required|boolean',
             'harga' => 'required|numeric',
             'category' => 'required|string|in:teknologi,makanan,minuman,hiburan,kendaraan',
-            'harga_diskon' => 'nullable|required_if:is_diskon,true|lt:harga|numeric',
             'description' => 'nullable|string',
         ];
 
+        if(){
+            
+        }
+        
+        'harga_diskon' => 'nullable|required_if:is_diskon,true|numeric',
 
 
         return $validate;
