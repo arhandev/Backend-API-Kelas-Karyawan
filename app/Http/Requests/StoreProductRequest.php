@@ -34,11 +34,10 @@ class StoreProductRequest extends FormRequest
             'description' => 'nullable|string',
         ];
 
-        if(){
-            
+        if ($this->get('is_diskon') == true) {
+            $validate['harga_diskon'] = 'nullable|required_if:is_diskon,true|lt:harga|numeric';
         }
-        
-        'harga_diskon' => 'nullable|required_if:is_diskon,true|numeric',
+
 
 
         return $validate;
