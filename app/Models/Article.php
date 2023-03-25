@@ -18,5 +18,7 @@ class Article extends Model
         'highlight',
     ];
 
-    
+    protected $casts = [
+        'highlight' => "boolean",
+    ];
 }
