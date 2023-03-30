@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\Auth\ArticleController as AuthArticleController;
 use App\Http\Controllers\Auth\ProductController as AuthProductController;
 use App\Http\Controllers\AuthContoller;
 use App\Http\Controllers\ProductController;
@@ -50,4 +51,12 @@ Route::group(['prefix' => 'final/products', 'middleware' => ['auth:sanctum']], f
     Route::post('/', [AuthProductController::class, 'store']);
     Route::put('/{product}', [AuthProductController::class, 'update']);
     Route::delete('/{product}', [AuthProductController::class, 'delete']);
+});
+
+Route::get('/auth/articles', [AuthArticleController::class, 'index']);
+Route::get('/auth/articles/{article}', [AuthArticleController::class, 'show']);
+Route::group(['prefix' => 'auth/articles', 'middleware' => ['auth:sanctum']], function () {
+    Route::post('/', [AuthArticleController::class, 'store']);
+    Route::put('/{article}', [AuthArticleController::class, 'update']);
+    Route::delete('/{article}', [AuthArticleController::class, 'delete']);
 });

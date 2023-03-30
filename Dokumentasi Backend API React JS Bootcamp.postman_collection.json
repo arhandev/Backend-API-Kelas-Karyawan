@@ -1,0 +1,587 @@
+{
+	"info": {
+		"_postman_id": "2b66c67b-5268-4d60-b104-022fe1529cc2",
+		"name": "Dokumentasi Backend API React JS Bootcamp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13583079"
+	},
+	"item": [
+		{
+			"name": "Articles",
+			"item": [
+				{
+					"name": "Get Articles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api-project.amandemy.co.id/api/articles",
+							"protocol": "http",
+							"host": [
+								"api-project",
+								"amandemy",
+								"co",
+								"id"
+							],
+							"path": [
+								"api",
+								"articles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store Articles",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Artikel 3\",\n    \"content\": \"Ini merupakan content dari artikel 4\",\n    \"image_url\": \"http://localhost:8000/images/sepeda.jpg\",\n    \"highlight\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api-project.amandemy.co.id/api/articles",
+							"protocol": "http",
+							"host": [
+								"api-project",
+								"amandemy",
+								"co",
+								"id"
+							],
+							"path": [
+								"api",
+								"articles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Article by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api-project.amandemy.co.id/api/articles/2",
+							"protocol": "http",
+							"host": [
+								"api-project",
+								"amandemy",
+								"co",
+								"id"
+							],
+							"path": [
+								"api",
+								"articles",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Articles",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Artikel 1\",\n    \"content\": \"Ini merupakan content dari artikel\",\n    \"image_url\": \"http://localhost:8000/images/pisang.jpg\",\n    \"highlight\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api-project.amandemy.co.id/api/articles/1",
+							"protocol": "http",
+							"host": [
+								"api-project",
+								"amandemy",
+								"co",
+								"id"
+							],
+							"path": [
+								"api",
+								"articles",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Articles by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api-project.amandemy.co.id/api/articles/1",
+							"protocol": "http",
+							"host": [
+								"api-project",
+								"amandemy",
+								"co",
+								"id"
+							],
+							"path": [
+								"api",
+								"articles",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Get Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api-project.amandemy.co.id/api/products",
+							"protocol": "http",
+							"host": [
+								"api-project",
+								"amandemy",
+								"co",
+								"id"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store Products",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Barang 2\",\n    \"harga\": 150000,\n    \"stock\": 250,\n    \"image_url\": \"http://api-project.amandemy.co.id/images/sepeda.jpg\",\n    \"is_diskon\": true,\n    \"harga_diskon\": 80000,\n    \"category\": \"kendaraan\",\n    \"description\": \"Deskripsi Product\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api-project.amandemy.co.id/api/products",
+							"protocol": "http",
+							"host": [
+								"api-project",
+								"amandemy",
+								"co",
+								"id"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api-project.amandemy.co.id/api/products/2",
+							"protocol": "http",
+							"host": [
+								"api-project",
+								"amandemy",
+								"co",
+								"id"
+							],
+							"path": [
+								"api",
+								"products",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Products",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Barang 1\",\n    \"harga\": 120000,\n    \"stock\": 200,\n    \"image_url\": \"http://localhost:8000/images/bottle.jpg\",\n    \"is_diskon\": false,\n    \"category\": \"kendaraan\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api-project.amandemy.co.id/api/products/2",
+							"protocol": "http",
+							"host": [
+								"api-project",
+								"amandemy",
+								"co",
+								"id"
+							],
+							"path": [
+								"api",
+								"products",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Products by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api-project.amandemy.co.id/api/products/1",
+							"protocol": "http",
+							"host": [
+								"api-project",
+								"amandemy",
+								"co",
+								"id"
+							],
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products with Auth",
+			"item": [
+				{
+					"name": "Get Products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|jXy9zHnhqkSbTFyj21CnpzkIEMGImkrGbxQOrpXA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://api-project.amandemy.co.id/api/final/products",
+							"protocol": "http",
+							"host": [
+								"api-project",
+								"amandemy",
+								"co",
+								"id"
+							],
+							"path": [
+								"api",
+								"final",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store Products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|jXy9zHnhqkSbTFyj21CnpzkIEMGImkrGbxQOrpXA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Barang 1\",\n    \"harga\": 120000,\n    \"stock\": 200,\n    \"image_url\": \"http://localhost:8000/images/bottle.jpg\",\n    \"is_diskon\": true,\n    \"harga_diskon\": 100000,\n    \"category\": \"kendaraan\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api-project.amandemy.co.id/api/final/products",
+							"protocol": "http",
+							"host": [
+								"api-project",
+								"amandemy",
+								"co",
+								"id"
+							],
+							"path": [
+								"api",
+								"final",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://api-project.amandemy.co.id/api/final/products/2",
+							"protocol": "http",
+							"host": [
+								"api-project",
+								"amandemy",
+								"co",
+								"id"
+							],
+							"path": [
+								"api",
+								"final",
+								"products",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|jXy9zHnhqkSbTFyj21CnpzkIEMGImkrGbxQOrpXA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Barang 1\",\n    \"harga\": 120000,\n    \"stock\": 200,\n    \"image_url\": \"http://localhost:8000/images/bottle.jpg\",\n    \"is_diskon\": false,\n    \"category\": \"kendaraan\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api-project.amandemy.co.id/api/final/products/2",
+							"protocol": "http",
+							"host": [
+								"api-project",
+								"amandemy",
+								"co",
+								"id"
+							],
+							"path": [
+								"api",
+								"final",
+								"products",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Products by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|jXy9zHnhqkSbTFyj21CnpzkIEMGImkrGbxQOrpXA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api-project.amandemy.co.id/api/final/products/1",
+							"protocol": "http",
+							"host": [
+								"api-project",
+								"amandemy",
+								"co",
+								"id"
+							],
+							"path": [
+								"api",
+								"final",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Farhan Abdul Hamid\",\n    \"username\": \"arhandev\",\n    \"email\": \"arhandev.code@gmail.com\",\n    \"password\": \"12341234\",\n    \"password_confirmation\": \"12341234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api-project.amandemy.co.id/api/register",
+							"protocol": "http",
+							"host": [
+								"api-project",
+								"amandemy",
+								"co",
+								"id"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"arhandev.code@gmail.com\",\n    \"password\": \"12341234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api-project.amandemy.co.id/api/login",
+							"protocol": "http",
+							"host": [
+								"api-project",
+								"amandemy",
+								"co",
+								"id"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

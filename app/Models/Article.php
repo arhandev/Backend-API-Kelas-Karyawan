@@ -16,9 +16,15 @@ class Article extends Model
         'content',
         'image_url',
         'highlight',
+        'user_id',
     ];
 
     protected $casts = [
         'highlight' => "boolean",
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }
