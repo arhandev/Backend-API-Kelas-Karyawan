@@ -48,6 +48,11 @@ class ArticleController extends Controller
             $article->content = $request->content;
             $article->image_url = $request->image_url;
             $article->highlight = $request->highlight;
+
+            if (auth()->user()) {
+                $article->user_id = auth()->user()->id;
+            }
+
             $article->save();
 
             return response()->json([
