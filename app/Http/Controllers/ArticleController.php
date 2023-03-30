@@ -12,7 +12,7 @@ class ArticleController extends Controller
     public function index()
     {
         try {
-            $articles = Article::latest()->get();
+            $articles = Article::with('user')->latest()->get();
             return response()->json([
                 "info" => "Berhasil Mengambil Artikel",
                 "data" => $articles
