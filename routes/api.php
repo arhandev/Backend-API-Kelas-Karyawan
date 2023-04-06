@@ -31,12 +31,9 @@ Route::post('/register', [AuthContoller::class, 'register']);
 Route::group(['prefix' => 'articles'], function () {
     Route::get('/', [ArticleController::class, 'index']);
     Route::get('/{article}', [ArticleController::class, 'show']);
-    Route::group(['middleware' => ['auth:sanctum']], function () {
-        Route::post('/', [ArticleController::class, 'store']);
-        Route::put('/{article}', [ArticleController::class, 'update']);
-        Route::delete('/{article}', [ArticleController::class, 'delete']);
-    });
-
+    Route::post('/', [ArticleController::class, 'store']);
+    Route::put('/{article}', [ArticleController::class, 'update']);
+    Route::delete('/{article}', [ArticleController::class, 'delete']);
 });
 
 Route::group(['prefix' => 'products'], function () {
