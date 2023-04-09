@@ -25,8 +25,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::post('/login', [AuthContoller::class, 'login']);
-Route::post('/logout', [AuthContoller::class, 'logout']);
 Route::post('/register', [AuthContoller::class, 'register']);
+Route::post('/logout', [AuthContoller::class, 'logout'])->middleware('auth:sanctum');
 
 
 Route::group(['prefix' => 'articles'], function () {

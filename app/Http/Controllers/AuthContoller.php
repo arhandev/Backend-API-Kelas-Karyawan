@@ -73,7 +73,7 @@ class AuthContoller extends Controller
         $code = "00";
         $data = [];
         try {
-            $token = $request->user()->currentAccessToken()->delete();
+            $token = auth()->user()->currentAccessToken()->delete();
             return response()->json([
                 "info" => "Berhasil Logout",
                 "data" => new stdClass()
