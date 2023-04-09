@@ -67,4 +67,22 @@ class AuthContoller extends Controller
             ], 500);
         }
     }
+
+    public function logout(Request $request)
+    {
+        $code = "00";
+        $data = [];
+        try {
+            $token = $request->user()->currentAccessToken()->delete();
+            return response()->json([
+                "info" => "Berhasil Logout",
+                "data" => new stdClass()
+            ]);
+        } catch (\Exception $e) {
+            return response()->json([
+                "info" => "Gagal Logout",
+                "data" => new stdClass()
+            ]);
+        }
+    }
 }
