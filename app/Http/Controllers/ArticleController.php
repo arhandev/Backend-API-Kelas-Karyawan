@@ -11,7 +11,6 @@ class ArticleController extends Controller
 {
     public function index()
     {
-        sleep(5);
         try {
             $articles = Article::with('user')->latest()->get();
             return response()->json([
