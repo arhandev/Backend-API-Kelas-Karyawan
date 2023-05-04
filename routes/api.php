@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\ArticleController as AuthArticleController;
 use App\Http\Controllers\Auth\ProductController as AuthProductController;
 use App\Http\Controllers\AuthContoller;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -28,6 +29,7 @@ Route::post('/login', [AuthContoller::class, 'login']);
 Route::post('/register', [AuthContoller::class, 'register']);
 Route::post('/logout', [AuthContoller::class, 'logout'])->middleware('auth:sanctum');
 
+Route::get('/profile', [ProfileController::class, 'index'])->middleware('auth:sanctum');
 
 Route::group(['prefix' => 'articles'], function () {
     Route::get('/', [ArticleController::class, 'index']);
