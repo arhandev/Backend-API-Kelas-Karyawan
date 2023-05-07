@@ -49,7 +49,7 @@ class ArticleController extends Controller
             $article->image_url = $request->image_url;
             $article->highlight = $request->highlight;
 
-            if (auth()->user()) {
+            if (auth('sanctum')->user()) {
                 $article->user_id = auth()->user()->id;
             }
 
