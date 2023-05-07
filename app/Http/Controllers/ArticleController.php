@@ -50,7 +50,7 @@ class ArticleController extends Controller
             $article->highlight = $request->highlight;
 
             if (auth('sanctum')->user()) {
-                $article->user_id = auth()->user()->id;
+                $article->user_id = auth('sanctum')->user()->id;
             }
 
             $article->save();
@@ -60,6 +60,7 @@ class ArticleController extends Controller
                 "data" => $article
             ]);
         } catch (\Throwable $th) {
+            dd($th);
             return response()->json([
                 "info" => "Terjadi Sesuatu Error",
                 "data" => new stdClass()
